@@ -7,6 +7,7 @@ describe "user sees all students" do
       student2 = Student.create!(name: "Tim")
 
       visit students_path
+      save_and_open_page
 
       expect(page).to have_content(student1.name)
       expect(page).to have_content(student2.name)
