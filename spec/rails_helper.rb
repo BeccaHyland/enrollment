@@ -31,6 +31,12 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 RSpec.configure do |config|
+  config.before(:each) do #cleans at beginning
+    DatabaseCleaner.clean
+  end
+  config.after(:each) do #cleans after each test
+    DatabaseCleaner.clean
+  end
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
