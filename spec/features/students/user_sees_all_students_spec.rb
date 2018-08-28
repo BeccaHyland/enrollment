@@ -8,8 +8,8 @@ describe "user sees all students" do
 
       visit students_path
 
-      expect(page).to have_content(student1.name)
-      expect(page).to have_content(student2.name)
+      expect(page).to have_link(student1.name)
+      expect(page).to have_link(student2.name)
     end
   end
 end

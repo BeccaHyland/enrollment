@@ -3,7 +3,7 @@
 <ul id="students">
   <% @students.each do |s| %>
     <li>
-      <%= s.name %>
+      <%= link_to s.name, student_path(s) %>
     </li>
   <% end %>
 </ul>
