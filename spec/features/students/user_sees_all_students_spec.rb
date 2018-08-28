@@ -14,10 +14,9 @@ describe "user sees all students" do
 
     it "links to create student page" do
 
-
       visit students_path
 
-      expect(page).to have_link(new_student_path)
+      expect(page).to have_link("Add New Student")
     end
   end
 end

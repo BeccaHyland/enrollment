@@ -13,5 +13,13 @@ describe "user sees one student" do
       expect(current_path).to eq(student_path(student1))
       expect(page).to have_content(student1.name)
 		end
+
+    it "links to all students page" do
+      student1 = Student.create!(name: "Becca")
+
+      visit student_path(student1)
+
+      expect(page).to have_link("See All Students")
+    end
 	end
 end
