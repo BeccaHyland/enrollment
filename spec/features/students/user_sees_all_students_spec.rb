@@ -11,5 +11,13 @@ describe "user sees all students" do
       expect(page).to have_link(student1.name)
       expect(page).to have_link(student2.name)
     end
+
+    it "links to create student page" do
+
+
+      visit students_path
+
+      expect(page).to have_link(new_student_path)
+    end
   end
 end

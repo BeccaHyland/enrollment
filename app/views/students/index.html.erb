@@ -3,7 +3,7 @@
 <ul id="students">
   <% @students.each do |s| %>
     <li>
-      <%= link_to s.name, student_path(s) %>
+      <%= link_to s.name, student_path(s), class: 'student-name', id: "student-#{s.id}" %>
     </li>
   <% end %>
 </ul>
