@@ -15,7 +15,7 @@ describe "user sees one student" do
 		end
 
     it "links to all students page" do
-      student1 = Student.create!(name: "Becca")
+      student1 = Student.create!(name: "Mike")
 
       visit student_path(student1)
 
